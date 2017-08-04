@@ -121,3 +121,5 @@ export TERM=screen-256color
 [ -f ~/.fzf.bash ] && source ~/.fzf.bash
 
 export PS1="\[$(tput bold)\]\[\033[38;5;77m\]\u\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]@\[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;68m\]\W\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\] \[$(tput bold)\]\[$(tput sgr0)\]\[\033[38;5;6m\]\A\[$(tput sgr0)\]\[$(tput sgr0)\]\[\033[38;5;15m\]> \[$(tput sgr0)\]"
+
+export PYTHONPATH=$PYTHONPATH:/usr/local/lib/python3.5
