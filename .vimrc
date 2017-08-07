@@ -34,13 +34,16 @@ Plug 'myusuf3/numbers.vim'
 " Syntastic
 Plug 'vim-syntastic/syntastic'
 
+" Vim-javascript
+Plug 'pangloss/vim-javascript'
+
 call plug#end()
 
 " Autoload NERDTree when vim is opened.
 autocmd VimEnter * NERDTree
 
 " Auto close NERDTree when a last buffer remains.
-autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
+" autocmd bufenter * if (winnr("$") == 1 && exists("b:NERDTree") && b:NERDTree.isTabTree()) | q | endif
 
 " Enable Airline Buffer.
 let g:airline#extensions#tabline#enabled = 1
@@ -77,6 +80,15 @@ nmap <F9> :TagbarToggle<CR>
 nmap <F3> :NumbersToggle<CR>
 nmap <F4> :NumbersOnOff<CR>
 nnoremap <silent> <F5> :SyntasticCheck<CR>
+
+" -- CSS, SCSS, JS Settings --
+
+autocmd FileType css setlocal tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab omnifunc=csscomplete#CompleteCSS
+autocmd FileType scss setlocal tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab omnifunc=csscomplete#CompleteCSS
+autocmd FileType javascript setlocal tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab conceallevel=1
+
+let g:javascript_plugin_jsdoc = 1
+let g:javascript_plugin_flow = 1
 
 syntax on
 filetype plugin indent on
