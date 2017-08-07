@@ -36,13 +36,13 @@ If you need more information, go [here](http://flake8.pycqa.org/en/latest/)
 
 * Install silversearcher-ag for global search.
 
-`
+```
 
 sudo apt-get install silversearcher-ag # Ubuntu
 
 brew install the_silver_searcher # Mac OS
 
-`
+```
 
 If you need more information, go [here](https://github.com/ggreer/the_silver_searcher)
 
