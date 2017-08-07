@@ -37,6 +37,9 @@ Plug 'vim-syntastic/syntastic'
 " Vim-javascript
 Plug 'pangloss/vim-javascript'
 
+" bufkill
+Plug 'qpkorr/vim-bufkill'
+
 call plug#end()
 
 " Autoload NERDTree when vim is opened.
@@ -79,6 +82,8 @@ nmap <F9> :TagbarToggle<CR>
 " toggle line numbers
 nmap <F3> :NumbersToggle<CR>
 nmap <F4> :NumbersOnOff<CR>
+" toggle NERDTree
+nmap <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <F5> :SyntasticCheck<CR>
 
 " -- CSS, SCSS, JS Settings --
