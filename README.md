@@ -2,6 +2,8 @@
 
 ## Included
 
+Every Plug-ins will be installed by [junegunn/vim-plug](https://github.com/junegunn/vim-plug).
+
 * vim
   * [NERDTree](https://github.com/scrooloose/nerdtree)
   * [Airline](https://github.com/vim-airline/vim-airline)
@@ -22,6 +24,11 @@
 
 ## Install
 
+### Precontidions
+
+- silversearcher-ag
+- ctags
+
 1. Clone git repository at home directory.
 
 ```bash
@@ -40,17 +47,30 @@ If you need more information, go [here](http://flake8.pycqa.org/en/latest/)
 
 * Install silversearcher-ag for global search.
 
-```bash
 
+```bash
 sudo apt-get install silversearcher-ag # Ubuntu
 
-brew install the_silver_searcher # Mac OS
+brew install the_silver_searcher # macOS
+```
 
+3. Install CTags for Tagbar
+```bash
+sudo apt-get install ctags # Ubuntu
+
+brew install ctags # macOS
 ```
 
 If you need more information, go [here](https://github.com/ggreer/the_silver_searcher)
 
-3. Open .vimrc files and run below line at the vim.
+4. Link Vim configuration files.
+
+```bash
+ln -s /path/to/repo/.vim ~/.vim
+ln -s /path/to/repo/.vimrc ~/.vimrc
+```
+
+5. Open .vimrc files and run below line at the vim.
 ```bash
 vim ~/.vimrc
 ```
@@ -58,6 +78,13 @@ vim ~/.vimrc
 ```bash
 :PlugInstall
 ```
+
+6. Reload tmux configuration if it is needed.
+
+```bash
+tmux source-file /path/to/.tmux.conf
+```
+
 
 ## Shortcuts
 

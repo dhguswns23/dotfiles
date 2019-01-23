@@ -1,4 +1,6 @@
-call plug#begin('~/.vim/plugged')
+let START_PATH = "~"
+
+call plug#begin(START_PATH.'/.vim/plugged')
 
 " -- Plugin Set --
 
@@ -17,6 +19,9 @@ Plug 'ervandew/supertab'
 
 " vim colorschemes
 Plug 'flazz/vim-colorschemes'
+
+" Color Scheme
+Plug 'junegunn/seoul256.vim'
 
 " tagbar
 Plug 'majutsushi/tagbar'
@@ -71,7 +76,7 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 let g:syntastic_auto_loc_list=1
 
 " Set Color Scheme
-colorscheme afterglow
+colorscheme seoul256
 
 " -- Key Binding --
 
