@@ -115,5 +115,3 @@ See details on [here](https://github.com/qpkorr/vim-bufkill)
 * Files: open fzf-vim on vim.
 
 * Ag: search string globally.
-
-
