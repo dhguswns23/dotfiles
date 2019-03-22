@@ -109,6 +109,8 @@ nmap <F4> :NumbersOnOff<CR>
 nmap <F2> :NERDTreeToggle<CR>
 nnoremap <silent> <F5> :SyntasticCheck<CR>
 
+" -- Default Vim Settings --
+set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 " -- CSS, SCSS, JS Settings --
 
 autocmd FileType css setlocal tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab omnifunc=csscomplete#CompleteCSS
