@@ -1,3 +1,7 @@
+" NOTE: exuberant-ctags should be installed before do PlugInstall
+
+set shell=/usr/bin/zsh
+
 let START_PATH = "~"
 
 call plug#begin(START_PATH.'/.vim/plugged')
@@ -25,7 +29,6 @@ Plug 'junegunn/seoul256.vim'
 
 " tagbar
 Plug 'majutsushi/tagbar'
-" NOTE: exuberant-ctags should be installed before do PlugInstall
 
 " fugitive
 Plug 'tpope/vim-fugitive'
@@ -114,7 +117,6 @@ set tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab
 " -- CSS, SCSS, JS Settings --
 
 autocmd FileType css setlocal tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab omnifunc=csscomplete#CompleteCSS
-autocmd FileType scss setlocal tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab omnifunc=csscomplete#CompleteCSS
 autocmd FileType javascript setlocal tabstop=2 softtabstop=0 expandtab shiftwidth=2 smarttab conceallevel=1
 
 let g:javascript_plugin_jsdoc = 1
@@ -122,3 +124,16 @@ let g:javascript_plugin_flow = 1
 
 syntax on
 filetype plugin indent on
+
+" -- Ignore files on .gitignore --
+let $FZF_DEFAULT_COMMAND = 'ag -g ""'
+
+" -- Cursor Movement on Insert Mode --
+inoremap <C-h> <Left>
+inoremap <C-j> <Down>
+inoremap <C-k> <Up>
+inoremap <C-l> <Right>
+cnoremap <C-h> <Left>
+cnoremap <C-j> <Down>
+cnoremap <C-k> <Up>
+cnoremap <C-l> <Right>
