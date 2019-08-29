@@ -1,6 +1,8 @@
 " NOTE: exuberant-ctags should be installed before do PlugInstall
+" -- Default Settings --
 
 set shell=/usr/bin/zsh
+set tags=./tagsset tags=./tags,tags
 
 let START_PATH = "~"
 
@@ -137,3 +139,7 @@ cnoremap <C-h> <Left>
 cnoremap <C-j> <Down>
 cnoremap <C-k> <Up>
 cnoremap <C-l> <Right>
+
+" -- CTags Key Binding --
+nnoremap <F11> <C-]>
+nnoremap <F12> <C-t>
