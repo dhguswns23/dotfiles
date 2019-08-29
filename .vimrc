@@ -3,6 +3,14 @@
 
 set shell=/usr/bin/zsh
 set tags=./tagsset tags=./tags,tags
+set tags+=../tags
+set tags+=../../tags
+set tags+=../../../tags
+set tags+=../../../../tags
+set tags+=../../../../../tags
+set tags+=../../../../../../tags
+set tags+=../../../../../../../tags
+set tags+=../../../../../../../../tags
 
 let START_PATH = "~"
 
