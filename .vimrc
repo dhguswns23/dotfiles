@@ -1,7 +1,7 @@
 " NOTE: exuberant-ctags should be installed before do PlugInstall
 " -- Default Settings --
 
-set shell=/usr/bin/zsh
+set shell=/bin/zsh
 set tags=./tagsset tags=./tags,tags
 set tags+=../tags
 set tags+=../../tags
@@ -36,9 +36,6 @@ Plug 'flazz/vim-colorschemes'
 
 " Color Scheme
 Plug 'junegunn/seoul256.vim'
-
-" tagbar
-Plug 'majutsushi/tagbar'
 
 " fugitive
 Plug 'tpope/vim-fugitive'
@@ -107,7 +104,7 @@ let g:syntastic_mode_map = { 'mode': 'passive',
 let g:syntastic_auto_loc_list=1
 
 " Set Color Scheme
-colorscheme seoul256
+colorscheme codedark
 
 " -- Key Binding --
 
