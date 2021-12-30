@@ -3,6 +3,7 @@
 # Please make sure this block is at the start of this file.
 [ -s ~/.fig/shell/pre.sh ] && source ~/.fig/shell/pre.sh
 #### END FIG ENV VARIABLES ####
+
 # If you come from bash you might have to change your $PATH.
 # export PATH=$HOME/bin:/usr/local/bin:$PATH
 
@@ -13,7 +14,7 @@ export ZSH="/Users/bex/.oh-my-zsh"
 # load a random theme each time oh-my-zsh is loaded, in which case,
 # to know which specific one was loaded, run: echo $RANDOM_THEME
 # See https://github.com/ohmyzsh/ohmyzsh/wiki/Themes
-ZSH_THEME="robbyrussell"
+ZSH_THEME="agnoster"
 
 # Set list of themes to pick from when loading at random
 # Setting this variable when ZSH_THEME=random will cause zsh to load
@@ -75,7 +76,11 @@ ZSH_THEME="robbyrussell"
 # Custom plugins may be added to $ZSH_CUSTOM/plugins/
 # Example format: plugins=(rails git textmate ruby lighthouse)
 # Add wisely, as too many plugins slow down shell startup.
-plugins=(git)
+plugins=(
+  git
+  zsh-autosuggestions
+  zsh-syntax-highlighting
+)
 
 source $ZSH/oh-my-zsh.sh
 
@@ -104,6 +109,35 @@ source $ZSH/oh-my-zsh.sh
 # Example aliases
 # alias zshconfig="mate ~/.zshrc"
 # alias ohmyzsh="mate ~/.oh-my-zsh"
+
+# Pyenv Settings
+export PYENV_ROOT="$HOME/.pyenv" 
+export PATH="$PYENV_ROOT/bin:$PATH:$PYENV_ROOT/shims" 
+eval "$(pyenv init --path)" 
+eval "$(pyenv init -)"
+
+export LANG="en_US.UTF-8"
+export LC_ALL="en_US.UTF-8"
+export LC_CTYPE="en_US.UTF-8"
+
+# Local Binary Path Binding
+export PATH="$PATH:$HOME/bin"
+
+# Istio Binary Path Binding
+export PATH="$PATH:$HOME/bin/istio-1.12.0/bin"
+
+# Load & Source Custom Sh
+export CUSTOM_SH_ROOT=$HOME/.csh
+
+for csh in "$CUSTOM_SH_ROOT"/*
+do
+  if [ -f "$csh" ]; then
+    echo "Load custom sh file $csh"
+    source $csh
+  fi
+done
+
+alias ls="exa --icons"
 
 #### FIG ENV VARIABLES ####
 # Please make sure this block is at the end of this file.

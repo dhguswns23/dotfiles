@@ -14,9 +14,13 @@ set tags+=../../../../../../../../tags
 
 let START_PATH = "~"
 
+" -- for vim-devicons
+set encoding=UTF-8
+
 call plug#begin(START_PATH.'/.vim/plugged')
 
 " -- Plugin Set --
+Plug 'ryanoasis/vim-devicons'
 
 " Airline
 Plug 'vim-airline/vim-airline'
@@ -148,3 +152,6 @@ cnoremap <C-l> <Right>
 " -- CTags Key Binding --
 nnoremap <F11> <C-]>
 nnoremap <F12> <C-t>
+
+" -- backspace settings
+set backspace=indent,eol,start
